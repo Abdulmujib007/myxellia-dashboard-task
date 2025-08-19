@@ -1,8 +1,34 @@
+import { useState } from "react";
 import { navBarIcons } from "../constants/data";
 import { navLinkIcons } from "../constants/data";
 import NavLinks from "./NavLinks";
 import Search from "./Search";
-function Navbar() {
+import BudgetModal from "./BudgetModal";
+function Navbar({
+  handleCalendarClick,
+  btnRef,
+}: {
+  handleCalendarClick: () => void;
+  btnRef: React.RefObject<HTMLImageElement | null>;
+}) {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const closeModal = () => setModalIsOpen(false);
+
+  const handleClick = (label: (typeof navBarIcons)[number]["iconLabel"]) => {
+    switch (label) {
+      case "budget":
+        setModalIsOpen(true);
+        return;
+      case "calendar":
+        handleCalendarClick();
+        return;
+
+      default:
+        return;
+    }
+  };
+
   return (
     <>
       <div
@@ -12,7 +38,14 @@ function Navbar() {
         <img src="src/assets/Myxellia-logo.svg" alt="myxellia-logo" />
         <ul className="flex items-center gap-8 ">
           {navBarIcons.map((icon, ind) => (
-            <img key={ind} src={icon.iconSrc} alt={icon.iconLabel} />
+            <img
+              ref={ind === 2 ? btnRef : null}
+              className="cursor-pointer"
+              onClick={() => handleClick(icon.iconLabel)}
+              key={ind}
+              src={icon.iconSrc}
+              alt={icon.iconLabel}
+            />
           ))}
         </ul>
       </div>
@@ -33,6 +66,7 @@ function Navbar() {
         </ul>
         <Search />
       </div>
+      <BudgetModal modalIsOpen={modalIsOpen} closeModal={closeModal} />;
     </>
   );
 }

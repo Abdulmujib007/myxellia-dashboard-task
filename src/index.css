@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+.calendarDiv > :first-child {
+  display: flex;
+  column-gap: 37px;
+  border-width: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.tiles {
+  display: flex;
+  flex-flow: column-reverse;
+  align-items: start;
+  margin-top: 0.3rem;
+  padding-left: 0.3rem;
+  color: #0d0d0d;
+  height: fit-content;
+  font-size: 10px;
+}
