@@ -15,7 +15,7 @@ function CustomCalendar({
   return (
     <div
       ref={calendarRef}
-      className={` w-[25rem] absolute  bg-[#0D0D0D] flex flex-col gap-5 top-[6rem] h-[calc(100vh-6rem)] ${
+      className={` w-[25rem] absolute  bg-[#0D0D0D] flex flex-col gap-5 top-[6rem] h-[calc(100vh-5.9rem)] ${
         isOpen ? "right-0" : " right-[-30rem] "
       }  transition-all duration-400 ease-in `}
     >
