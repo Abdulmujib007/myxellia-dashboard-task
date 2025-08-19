@@ -30,7 +30,7 @@ const OverviewTemplate = ({
         </div>
         <div className=" flex gap-x-2 font-medium text-[0.75rem] text-[#4545FE] items-center ">
           <span>View all</span>
-          <img src="src/assets/arrow-right.svg" alt="" />
+          <img src="/arrow-right.svg" alt="" />
         </div>
       </section>
       <section className="flex justify-between py-[1.125rem] px-[1rem]">

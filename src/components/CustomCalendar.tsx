@@ -21,13 +21,13 @@ function CustomCalendar({
     >
       <main className="flex justify-between items-center bg-[#171717] px-5 py-4">
         <div className="flex gap-2 items-center">
-          <img src="src/assets/white-right-arrow.svg" alt="back-icon" />
+          <img src="/white-right-arrow.svg" alt="back-icon" />
           <span className="font-semibold text-[1rem] text-white">Calendar</span>
         </div>
         <img
           className="cursor-pointer"
           onClick={handleClick}
-          src="src/assets/cancel.svg"
+          src="/cancel.svg"
           alt="close-icon"
         />
       </main>

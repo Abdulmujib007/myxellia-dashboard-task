@@ -32,9 +32,9 @@ function SalesOverview() {
       </div>
       <div className="h-full  flex justify-between pl-2.5 pr-[1.375rem] pt-4 gap-4">
         <div className="flex grow items-center w-[50%] ">
-          <img src="src/assets/left-arrow.svg" alt="" />
+          <img src="/left-arrow.svg" alt="" />
           <SalesBarChart />
-          <img src="src/assets/right-arrow.svg" alt="" />
+          <img src="/right-arrow.svg" alt="" />
         </div>
         <div className="w-[37.5%] max-w-[50%]  justify-end flex flex-wrap gap-x-4">
           {barChartCardData.map((data, ind) => (

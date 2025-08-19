@@ -31,8 +31,8 @@ function BudgetModal({ modalIsOpen, closeModal }: Props) {
         shouldCloseOnOverlayClick={true}
       >
         <>
-          <div className="bg-[url('src/assets/media.png')] bg-cover  bg-no-repeat flex items-center justify-center h-[13.3rem] ">
-            <img src="src/assets/calculator.svg" />
+          <div className="bg-[url('/media.png')] bg-cover  bg-no-repeat flex items-center justify-center h-[13.3rem] ">
+            <img src="/calculator.svg" />
           </div>
           <main className="py-6 px-[3rem] flex flex-col gap-6">
             {modalContent.map((content, ind) => (

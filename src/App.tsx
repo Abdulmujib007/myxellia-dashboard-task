@@ -43,7 +43,7 @@ function App() {
           ))}
 
           <div className="absolute bg-[#242526] rounded-full p-[1.05rem] top-[2.7rem] right-[-5px] ">
-            <img src="src/assets/messages-3.svg" alt="message-icon" />
+            <img src="/messages-3.svg" alt="message-icon" />
           </div>
         </div>
       </div>
